@@ -40,6 +40,8 @@ import { logoutUser } from '../../slices/UserSlice';
 
 export default function UserHome() {
   const isLogin = useSelector((state) => state.user.islogin);
+  const user_id = useSelector((state)=>state.user.user_id);
+  console.log("user id in user home "+ user_id)
   const dispatch = useDispatch();
 
   return (

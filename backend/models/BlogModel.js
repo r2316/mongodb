@@ -3,10 +3,12 @@ const blogSchema = new mongoose.Schema({
   title: String,
   content: String,
   category: String,
-  imageUrl: String,
-  createdAt: {
-    type: Date,
-    default: Date.now,
+  imageUrl: String, 
+  user_id: {
+    type:  String,
+    
+    required: true,
+    
   },
 });
 
