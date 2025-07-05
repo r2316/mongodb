@@ -318,7 +318,7 @@ export default function Allblogs() {
               className="border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow duration-300"
             >
               <img
-                src={`http://localhost:8080${blog.imageUrl}`}
+                src={`https://mongodb-ldju.vercel.app${blog.imageUrl}`}
                 alt={blog.title}
                 className="w-full h-48 object-cover"
               />
