@@ -104,7 +104,7 @@ router.get("/", async (req, res) => {
     res.status(200).json(data);
   } catch (err) {
     console.error("Error fetching blogs:", err);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: err });
   }
 });
 
