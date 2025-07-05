@@ -353,7 +353,7 @@ export default function Allblogs() {
             </button>
             <h3 className="text-2xl font-bold mb-4 text-blue-700">{selectedBlog.title}</h3>
             <img
-              src={`http://localhost:8080${selectedBlog.imageUrl}`}
+              src={`https://mongodb-ldju.vercel.app${selectedBlog.imageUrl}`}
               alt={selectedBlog.title}
               className="w-full h-64 object-cover rounded mb-4"
             />

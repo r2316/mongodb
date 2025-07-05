@@ -36,7 +36,7 @@ export default function UserHome() {
 import { useSelector, useDispatch } from 'react-redux';
 import UserLogin from './Userlogin';
 import { Link } from 'react-router-dom'; 
-import { logoutUser } from '../../slices/UserSlice';
+import { logoutUser } from '../../slices/Userslice';
 
 export default function UserHome() {
   const isLogin = useSelector((state) => state.user.islogin);

@@ -80,7 +80,7 @@ export default function UserLogin() {
  import React, { useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../config/apidetails';
-import { loginUser } from '../../slices/UserSlice';
+import { loginUser } from '../../slices/Userslice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
