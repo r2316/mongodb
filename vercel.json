@@ -10,6 +10,10 @@
         {
             "src": "/backend/(.*)",
             "dest": "/backend/index.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/backend/index.js"
         }
     ]
 }
