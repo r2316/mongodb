@@ -141,9 +141,7 @@ app.listen(8080, () => console.log("Server running on 8080"));
 */
 const conn = require("./connection")
 const express = require("express")
-const userRouter = require("./routers/userRouter")
-const Registrationrouter = require("./routers/RegistrationRouter")
-const BlogRouter = require("./routers/BlogRouter")
+
 const app = express()
 const cors = require("cors")
 const path = require('path');
@@ -154,7 +152,9 @@ const corsOptions ={
 }
 app.use(cors(corsOptions));
 // app.use(cors())
-
+const userRouter = require("./routers/userRouter")
+const Registrationrouter = require("./routers/RegistrationRouter")
+const BlogRouter = require("./routers/BlogRouter")
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
