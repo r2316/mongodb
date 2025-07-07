@@ -75,6 +75,7 @@ export default function AddBlog() {
         res = await axios.post(`${API_URL}blogs`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
+            "Access-Control-Allow-Origin":"*"
           },
         });
       }
