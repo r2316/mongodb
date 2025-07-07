@@ -5,29 +5,8 @@
             "src": "backend/index.js",
             "use": "@vercel/node"
         }
-    ],
-    "routes": [
-        {
-            "src": "/backend/(.*)",
-            "dest": "/backend/index.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/backend/index.js"
-        }
     ]
+    
 
- ,
-  "headers": [
-    {
-      "source": "/backend/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS,PUT,DELETE" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" },
-        { "key": "Access-Control-Allow-Credentials", "value": "true" }
-      ]
-    }
-  ]
 
 }
