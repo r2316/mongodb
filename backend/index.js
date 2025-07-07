@@ -145,26 +145,26 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 const path = require('path');
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "https://projectfrontend-fawn.vercel.app");
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://projectfrontend-fawn.vercel.app");
   
-//   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-//   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-//   res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
 
-//   if (req.method === "OPTIONS") {
-//     return res.status(200).end(); // ✅ This line is critical for fixing POST issues
-//   }
+  if (req.method === "OPTIONS") {
+    return res.status(200).end(); // ✅ This line is critical for fixing POST issues
+  }
 
-//   next();
-// });
-const corsOptions ={
-    origin:"*",
-    // origin:['http://localhost:3000','http://localhost:5174','https://projectfrontend-fawn.vercel.app'], 
-    // credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+  next();
+});
+// const corsOptions ={
+//     origin:"*",
+//     // origin:['http://localhost:3000','http://localhost:5174','https://projectfrontend-fawn.vercel.app'], 
+//     // credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200
+// }
+// app.use(cors(corsOptions));
 // app.use(cors())
 const userRouter = require("./routers/userRouter")
 const Registrationrouter = require("./routers/RegistrationRouter")
