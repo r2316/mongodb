@@ -145,12 +145,15 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 const path = require('path');
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
+
+const corsOptions = {
+  origin: "https://projectfrontend-fawn.vercel.app", // your frontend origin
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true, // if you're using cookies or authorization headers
+};
+
+app.use(cors(corsOptions));
 // const corsOptions ={
 //     origin:"*",
 //     // origin:['http://localhost:3000','http://localhost:5174','https://projectfrontend-fawn.vercel.app'], 
